@@ -303,7 +303,7 @@ The following query types are handled end-to-end by the platform:
 ## Future Enhancements
 
 - **Real CRM integration** - write tickets and customer records directly to Salesforce or Dynamics 365
-- **Microsoft 365 / Power Automate workflows** — trigger automated email and approval flows
+- **Microsoft 365 / Power Automate workflows** - trigger automated email and approval flows
 - **Voice AI assistant** - speech-to-text input for accessibility
 - **Sentiment analysis** - detect frustrated customers in real time and auto-escalate
 - **Fraud detection** - flag potentially forged or manipulated document uploads
