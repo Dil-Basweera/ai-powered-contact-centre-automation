@@ -9,11 +9,10 @@ from dotenv import load_dotenv
 # LOAD ENV
 load_dotenv()
 
-api_key = (
-    st.secrets.get("GROQ_API_KEY")
-    if "GROQ_API_KEY" in st.secrets
-    else os.getenv("GROQ_API_KEY")
-)
+try:
+    api_key = st.secrets["GROQ_API_KEY"]
+except Exception:
+    api_key = os.getenv("GROQ_API_KEY")
 
 client = Groq(
     api_key=api_key

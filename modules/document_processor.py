@@ -13,11 +13,10 @@ load_dotenv()
 
 
 # API KEY (Local + Streamlit Cloud)
-api_key = (
-    st.secrets.get("GROQ_API_KEY")
-    if "GROQ_API_KEY" in st.secrets
-    else os.getenv("GROQ_API_KEY")
-)
+try:
+    api_key = st.secrets["GROQ_API_KEY"]
+except Exception:
+    api_key = os.getenv("GROQ_API_KEY")
 
 
 # GROQ CLIENT
